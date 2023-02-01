@@ -1,0 +1,62 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background-color: darksalmon;
+    overflow-y: hidden;
+    .wrapper {
+                 display: flex;
+                 flex-direction: column;
+                .area {
+                        width: 25em;
+                        height: 25em;
+                        margin-top: 8em;
+                        margin-left: auto;
+                        margin-right: auto;
+                        border: 3px solid salmon;
+                        border-radius: 10px;
+                        background-color: antiquewhite;
+
+                        
+                      }
+                .buttons {
+                            width: 25em;
+                            height: 25em;
+                            margin-top: 1em;
+                            margin-left: auto;
+                            margin-right: auto;
+                        
+
+                        .appearence {
+                                        width: 3em;
+                                        height: 3em;
+                                        background-color: burlywood;
+                                        border: 3px solid salmon;
+                                        border-radius: 10px;
+                                        margin-left: auto;
+                                        margin-right: 3em;
+
+                                        &:hover {
+                                                    border: 3px solid #8a460c;
+                                                    cursor: pointer;
+                                                }
+                                        &:active {
+                                                    border: 3px solid #8a464c;
+                                                    cursor: wait;
+                                                    box-shadow: 1px 1px 1px #9d542e;
+                                        }
+                                    }
+
+                         }
+             }
+    }
+
+.mario-style {
+   display: none;
+   transition: all linear 0.15s;             
+                img     {
+                    height: 5em;
+                    width: 5em;
+                    margin-left: -0.8em;
+                    margin-right: -0.8em;
+                }
+}
