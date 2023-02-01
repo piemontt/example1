@@ -12,44 +12,44 @@ mario.app = function (elem) {
     }
     else {
         elem.style.display = "block";
-        elem.style.marginLeft = '-0.1em';
-        elem.style.marginRight = '-0.8em';
-        elem.style.marginTop = '0';
         position.horizontalCount = 0;
         position.verticalCount = 0;
+     
+        elem.style.left = '0';
+        elem.style.top = 0;
     }
 }
 
 //передвижение вправо
 mario.moveRight = function (elem) {
-    if (position.horizontalCount <= 21) {
-        position.horizontalCount += 0.5;
+    if (position.horizontalCount <= 19.9) {
+        position.horizontalCount += 0.3;
     }
-    elem.style.marginLeft = `${position.horizontalCount}em`;
+    elem.style.left = `${position.horizontalCount}em`;
 }
 
 //передвижение влево
 mario.moveLeft = function (elem) {
-    if (position.horizontalCount >= 0.1) {
-        position.horizontalCount -= 0.5;
+    if (position.horizontalCount >= 0.2) {
+        position.horizontalCount -= 0.3;
     }
-    elem.style.marginLeft = `${position.horizontalCount}em`;
+    elem.style.left = `${position.horizontalCount}em`;
 }
 
 //передвижение вниз
 mario.moveDown = function (elem) {
-    if (position.verticalCount <= 19.6) {
-        position.verticalCount += 0.5;
+    if (position.verticalCount <= 19.9) {
+        position.verticalCount += 0.3;
     }
-    elem.style.marginTop = `${position.verticalCount}em`;
+    elem.style.top = `${position.verticalCount}em`;
 }
 
 //передвижение вверх
 mario.moveUp = function (elem) {
-    if (position.verticalCount >= 0.1) {
-        position.verticalCount -= 0.5;
+    if (position.verticalCount >= 0.3) {
+        position.verticalCount -= 0.3;
     }
-    elem.style.marginTop = `${position.verticalCount}em`;
+    elem.style.top = `${position.verticalCount}em`;
 }
 
 
