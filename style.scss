@@ -26,6 +26,8 @@
                             margin-top: 1em;
                             margin-left: auto;
                             margin-right: auto;
+                            text-align: center;
+                            
                         
 
                         .appearence {
@@ -35,6 +37,26 @@
                                         border: 3px solid salmon;
                                         border-radius: 10px;
                                         margin-left: auto;
+                                        margin-right: 3em;
+                                        line-height: 1em;
+
+                                        &:hover {
+                                                    border: 3px solid #8a460c;
+                                                    cursor: pointer;
+                                                }
+                                        &:active {
+                                                    border: 3px solid #8a464c;
+                                                    cursor: wait;
+                                                    box-shadow: 1px 1px 1px #9d542e;
+                                        }
+                                    }
+                        .bomb {
+                                        width: 3em;
+                                        height: 3em;
+                                        background-color: burlywood;
+                                        border: 3px solid salmon;
+                                        border-radius: 10px;
+                                        margin-top: -3.4em;
                                         margin-right: 3em;
 
                                         &:hover {
@@ -66,4 +88,8 @@
                     
                     
                 }
+}
+
+.bomb {
+
 }

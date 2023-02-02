@@ -2,8 +2,32 @@ const mario = {};
 const position = {};
 const marioStyle = document.querySelector(".mario-style");
 const appearence = document.querySelector('.appearence');
+const area = document.querySelector('.area');
+const buttonBomb = document.querySelector('.bomb');
+
+
 position.horizontalCount = 0;
 position.verticalCount = 0;
+
+// Функция выдает рандомное целое число больше 5
+function getRandomInt(max) {
+    let result = Math.floor(Math.random() * max);
+    switch (result) {
+        case 5: return result + 1;
+            break;
+        case 4: return result + 2;
+            break;
+        case 3: return result + 3;
+            break;
+        case 2: return result + 4;
+            break;
+        case 1: return result + 5;
+            break;
+        case 0: return result + 6;
+            break;
+        default: return result;
+    }
+}
 
 // кнопка появления(сброса)
 mario.app = function (elem) {
@@ -52,8 +76,25 @@ mario.moveUp = function (elem) {
     elem.style.top = `${position.verticalCount}em`;
 }
 
+//создание бомб
+mario.getBomb = function () {
+    for (let i = 0; i < 5; i++) {
+        let bomb = document.createElement('div');
+        bomb.classList.add('.bomb')
+        bomb.style.height = "2em";
+        bomb.style.width = "2em";
+        bomb.style.background = "url(image/bomb.png)";
+        bomb.style.backgroundSize = 'contain';
+        bomb.style.position = 'absolute';
+        bomb.style.top = `${getRandomInt(24)}em`;
+        bomb.style.left = `${getRandomInt(24)}em`;
+        area.append(bomb);
+    } 
+}
 
 appearence.addEventListener('click', () => { mario.app(marioStyle) });
+
+buttonBomb.addEventListener('click', () => { mario.getBomb() });
 
 document.addEventListener('keydown', (event) => {
     if (event.code === "ArrowRight")
@@ -75,4 +116,12 @@ document.addEventListener('keydown', (event) => {
         mario.moveDown(marioStyle)
 });
 
-//comment 1
+
+
+let computedPositionTop = document.querySelectorAll('.bomb').offsetLeft;
+
+//короче здесь хуйня в том что бы получить коллекцию бомб и к каждой из них в цикле получить offsetleft и offsettop, сравнивая с позицией игрока, но это пока не точно
+
+
+
+
