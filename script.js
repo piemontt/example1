@@ -118,7 +118,7 @@ document.addEventListener('keydown', (event) => {
 
 
 
-let computedPositionTop = document.querySelectorAll('.bomb').offsetLeft;
+let computedPositionTop = document.querySelectorAll('.bomb');
 
 //короче здесь хуйня в том что бы получить коллекцию бомб и к каждой из них в цикле получить offsetleft и offsettop, сравнивая с позицией игрока, но это пока не точно
 
